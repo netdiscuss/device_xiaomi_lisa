@@ -126,16 +126,19 @@ void vendor_load_properties() {
             fp,
             fp_desc,
             "Xiaomi", "lisa", "2109119DI");
+        property_override("ro.product.mod_device", "lisa_in_global");
     } else if (region == "GLOBAL") {
         set_device_props(
             fp,
             fp_desc,
             "Xiaomi", "lisa", "2109119DG");
+        property_override("ro.product.mod_device", "lisa_global");
     } else {
         set_device_props(
             fp,
             fp_desc,
             "Xiaomi", "lisa", "2109119DG");
+        property_override("ro.product.mod_device", "lisa_global");
     }
 
     load_dalvik_properties();
