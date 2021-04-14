@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+$(call inherit-product, vendor/xiaomi/lisa/lisa-vendor.mk)
+
 LISA_PREBUILT := device/xiaomi/lisa-prebuilt
 
 # Enable updating of APEXes

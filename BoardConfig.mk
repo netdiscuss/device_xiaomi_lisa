@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from the proprietary version
+-include vendor/xiaomi/lisa/BoardConfigVendor.mk
+
 DEVICE_PATH := device/xiaomi/lisa
 LISA_PREBUILT := device/xiaomi/lisa-prebuilt
 
