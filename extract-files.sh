@@ -29,6 +29,9 @@ function blob_fixup() {
         product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
             sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
             ;;
+        product/vendor_overlay/30/etc/qdcm_calib_data_xiaomi_36_02_0a_cmd_mode_dsc_dsi_panel.xml | product/vendor_overlay/30/etc/qdcm_calib_data_xiaomi_42_0d_0b_cmd_mode_dsc_dsi_panel.xml)
+        sed -i "s/dcip3/srgb/" "${2}"
+        ;;
     esac
 }
 
