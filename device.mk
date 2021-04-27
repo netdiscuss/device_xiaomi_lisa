@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.lisa
+    android.hardware.lights-service.lisa
 
 # NFC
 PRODUCT_PACKAGES += \
