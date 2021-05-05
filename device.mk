@@ -87,6 +87,10 @@ PRODUCT_PACKAGES += \
     init.lisa.rc \
     init.qcom.rc
 
+# Device Settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
