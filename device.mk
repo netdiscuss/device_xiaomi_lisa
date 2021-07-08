@@ -61,7 +61,8 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayLisa \
-    WifiResOverlayLisa
+    WifiResOverlayLisa \
+    DialerOverlayLisa
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
