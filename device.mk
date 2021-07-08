@@ -63,8 +63,12 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayLisa \
     SettingsOverlayLisa \
     SystemUIOverlayLisa \
-    WifiResOverlayLisa \
+    WifiResOverlayLisa
+
+ifneq ($(ARROW_GAPPS), true)
+PRODUCT_PACKAGES += \
     DialerOverlayLisa
+endif
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
