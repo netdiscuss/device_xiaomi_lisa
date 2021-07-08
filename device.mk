@@ -61,6 +61,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayLisa \
+    SystemUIOverlayLisa \
     WifiResOverlayLisa \
     DialerOverlayLisa
 
