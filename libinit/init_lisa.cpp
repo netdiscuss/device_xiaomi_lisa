@@ -53,5 +53,10 @@ void property_override(char const prop[], char const value[], bool add = true) {
 
 void vendor_load_properties() {
 
+    // Safetynet Workaround
+    property_override("ro.boot.verifiedbootstate", "green");
     property_override("ro.oem_unlock_supported", "0");
+    property_override("ro.build.description", "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys");
+    property_override("ro.build.fingerprint", "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys");
+    property_override("ro.system.build.fingerprint", "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys");
 }
