@@ -109,6 +109,9 @@ ndk::ScopedAStatus Power::isModeSupported(Mode type, bool* _aidl_return) {
     LOG(INFO) << "Power isModeSupported: " << static_cast<int32_t>(type);
 
     switch(type){
+        case Mode::DOUBLE_TAP_TO_WAKE:
+            *_aidl_return = true;
+            break;
         case Mode::INTERACTIVE:
         case Mode::SUSTAINED_PERFORMANCE:
         case Mode::FIXED_PERFORMANCE:
