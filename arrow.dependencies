@@ -1,2 +1,6 @@
 [
+  {
+    "repository": "android_device_xiaomi_lisa-prebuilt",
+    "target_path": "device/xiaomi/lisa-prebuilt"
+  }
 ]
