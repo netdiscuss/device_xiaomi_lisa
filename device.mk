@@ -75,6 +75,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LISA_PREBUILT)/kernel/dtb.img:dtb.img
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl
+
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
