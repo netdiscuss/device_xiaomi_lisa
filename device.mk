@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayLisa \
     SettingsOverlayLisa \
     SystemUIOverlayLisa \
+    TelephonyOverlayLisa \
     WifiResOverlayLisa
 
 ifneq ($(ARROW_GAPPS), true)
