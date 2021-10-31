@@ -109,6 +109,10 @@ endif
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.2
+
 # Properties
 include $(LOCAL_PATH)/properties/default.mk
 
