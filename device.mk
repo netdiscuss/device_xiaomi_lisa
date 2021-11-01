@@ -60,7 +60,8 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
-    init.recovery.qcom.sh
+    init.recovery.qcom.sh \
+    init.lisa.rc
 
 # fastbootd
 PRODUCT_PACKAGES += \
