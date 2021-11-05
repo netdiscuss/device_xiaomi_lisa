@@ -5,3 +5,11 @@ service vendor.face-hal-1-0-default /vendor/bin/hw/android.hardware.biometrics.f
     group camera system
     shutdown critical
     disabled
+
+service vendor.light-qti /vendor/bin/hw/android.hardware.lights-service.qti
+    class hal
+    user system
+    group system
+    shutdown critical
+    disabled
+    override
