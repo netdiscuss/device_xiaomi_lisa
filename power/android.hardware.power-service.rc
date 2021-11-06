@@ -2,3 +2,4 @@ service vendor.power /system/bin/hw/android.hardware.power-service.lisa
     class hal
     user system
     group system
+    override
