@@ -118,6 +118,10 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.lisa
+
 # RRO Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayLisa \
