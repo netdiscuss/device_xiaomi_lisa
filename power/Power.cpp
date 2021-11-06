@@ -73,7 +73,7 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     switch(type){
         case Mode::DOUBLE_TAP_TO_WAKE: {
             int fd = open(TOUCH_DEV_PATH, O_RDWR);
-            int arg[2] = {Touch_Doubletap_Mode, enabled ? 1 : 0};
+            int arg[] = {SET_CUR_VALUE, Touch_Doubletap_Mode, enabled ? 1 : 0};
             ioctl(fd, TOUCH_IOC_SETMODE, &arg);
             break;
         }
