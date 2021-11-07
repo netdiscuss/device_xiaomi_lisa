@@ -135,6 +135,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlayLisa \
     FrameworkResOverlayLisa \
     SettingsOverlayLisa \
+    SettingsProviderOverlayLisa \
     SystemUIOverlayLisa \
     TelephonyOverlayLisa \
     WifiResOverlayLisa
