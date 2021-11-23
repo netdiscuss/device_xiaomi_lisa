@@ -85,15 +85,8 @@ void load_dalvik_properties() {
     property_override("dalvik.vm.heapminfree", "8m");
 }
 
-void set_device_props(const std::string fingerprint, const std::string description,
-        const std::string brand, const std::string device, const std::string model) {
-    const auto set_ro_build_prop = [](const std::string &source,
-                                      const std::string &prop,
-                                      const std::string &value) {
-        auto prop_name = "ro." + source + "build." + prop;
-        property_override(prop_name.c_str(), value.c_str(), true);
-    };
-
+void set_device_props(const std::string brand, const std::string device, const std::string model,
+        const std::string name, const std::string marketname) {
     const auto set_ro_product_prop = [](const std::string &source,
                                         const std::string &prop,
                                         const std::string &value) {
@@ -102,36 +95,24 @@ void set_device_props(const std::string fingerprint, const std::string descripti
     };
 
     for (const auto &source : ro_props_default_source_order) {
-        set_ro_build_prop(source, "fingerprint", fingerprint);
         set_ro_product_prop(source, "brand", brand);
         set_ro_product_prop(source, "device", device);
         set_ro_product_prop(source, "model", model);
+        set_ro_product_prop(source, "name", name);
+        set_ro_product_prop(source, "marketname", marketname);
     }
-
-    property_override("ro.build.fingerprint", fingerprint.c_str());
-    property_override("ro.build.description", description.c_str());
-    property_override("ro.bootimage.build.fingerprint", fingerprint.c_str());
-    property_override("ro.system_ext.build.fingerprint", fingerprint.c_str());
 }
 
 void vendor_load_properties() {
-//   SafetyNet workaround
-    char const fp[] = "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
-    char const fp_desc[] = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
-
     string region = android::base::GetProperty("ro.boot.hwc", "");
 
     if (region == "IN") {
         set_device_props(
-            fp,
-            fp_desc,
-            "Xiaomi", "lisa", "2109119DI");
+            "Xiaomi", "lisa", "2109119DI", "lisa_in", "Xiaomi 11 Lite NE");
         property_override("ro.product.mod_device", "lisa_in_global");
     } else {
         set_device_props(
-            fp,
-            fp_desc,
-            "Xiaomi", "lisa", "2109119DG");
+            "Xiaomi", "lisa", "2109119DG", "lisa_global", "Xiaomi 11 Lite 5G NE");
         property_override("ro.product.mod_device", "lisa_global");
     }
 
@@ -141,4 +122,3 @@ void vendor_load_properties() {
     property_override("ro.boot.verifiedbootstate", "green");
     property_override("ro.oem_unlock_supported", "0");
 }
-

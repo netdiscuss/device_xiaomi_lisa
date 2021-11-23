@@ -24,6 +24,9 @@ PRODUCT_NAME := arrow_lisa
 
 # Build info
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="lisa"
+    PRODUCT_NAME="lisa" \
+    PRIVATE_BUILD_DESC="dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys"
+
+BUILD_FINGERPRINT := Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
