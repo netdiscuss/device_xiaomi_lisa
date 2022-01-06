@@ -11,6 +11,8 @@ DEVICE_PATH := device/xiaomi/lisa
 LISA_PREBUILT := device/xiaomi/lisa-prebuilt
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # A/B
 AB_OTA_UPDATER := true
