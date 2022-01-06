@@ -106,9 +106,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     org.ifaa.android.manager
 
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
-
 # Kernel
 PRODUCT_COPY_FILES += \
     $(LISA_PREBUILT)/kernel/dtb.img:dtb.img
