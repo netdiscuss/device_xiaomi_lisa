@@ -76,8 +76,8 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Camera
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V2
+#PRODUCT_PACKAGES += \
+#    GCamGOPrebuilt-V2
 
 # Common init scripts
 PRODUCT_PACKAGES += \
