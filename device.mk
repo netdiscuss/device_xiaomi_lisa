@@ -137,17 +137,13 @@ PRODUCT_PACKAGES += \
 # RRO Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayLisa \
+    DialerOverlayLisa \
     FrameworkResOverlayLisa \
     SettingsOverlayLisa \
     SettingsProviderOverlayLisa \
     SystemUIOverlayLisa \
     TelephonyOverlayLisa \
     WifiResOverlayLisa
-
-ifneq ($(ARROW_GAPPS), true)
-PRODUCT_PACKAGES += \
-    DialerOverlayLisa
-endif
 
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
