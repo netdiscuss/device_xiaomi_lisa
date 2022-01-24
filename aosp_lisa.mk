@@ -15,6 +15,7 @@ $(call inherit-product, device/xiaomi/lisa/device.mk)
 # Inherit common PixelOS configurations
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
