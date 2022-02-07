@@ -6,8 +6,6 @@
 
 $(call inherit-product, vendor/xiaomi/lisa/lisa-vendor.mk)
 
-LISA_PREBUILT := device/xiaomi/lisa-prebuilt
-
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -23,9 +21,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
-#Suppot to compile recovery without msm headers
-TARGET_HAS_GENERIC_KERNEL_HEADERS := true
 
 # AAPT
 # Device uses high-density artwork where available
@@ -112,8 +107,9 @@ PRODUCT_PACKAGES += \
     org.ifaa.android.manager
 
 # Kernel
-PRODUCT_COPY_FILES += \
-    $(LISA_PREBUILT)/kernel/dtb.img:dtb.img
+KERNEL_MODULES_INSTALL := dlkm
+KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/lisa/$(KERNEL_MODULES_INSTALL)/lib/modules
+KERNEL_SD_LLVM_SUPPORT := true
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -197,7 +193,3 @@ PRODUCT_PACKAGES_DEBUG += \
 # Vendor boot
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-
-# Vendor boot modules
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LISA_PREBUILT)/modules/vendor_boot,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules)
