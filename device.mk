@@ -107,8 +107,8 @@ PRODUCT_PACKAGES += \
     org.ifaa.android.manager
 
 # Kernel
-KERNEL_MODULES_INSTALL := dlkm
-KERNEL_MODULES_OUT := $(OUT_DIR)/target/product/lisa/$(KERNEL_MODULES_INSTALL)/lib/modules
+NEED_KERNEL_MODULE_VENDOR_OVERLAY := true
+KERNEL_MODULES_OUT := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)
 KERNEL_SD_LLVM_SUPPORT := true
 
 # Keylayout
